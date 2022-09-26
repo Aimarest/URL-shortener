@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+
+
+body {
+    font-family: "Muli", sans-serif;
+    background-color: blueviolet;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.text{
+ width: 600px;
+}
+.container {
+    background-color: #393e467d;
+    padding: 20px 40px;
+    border-radius: 5px;
+    margin-top:80px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.btn {
+    border: #fff;
+    border-radius: 5px;
+    background-color: #393e467d;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+}
+
+.btn:hover {
+    background: #ec22cb;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ec22cb,
+        0 0 25px #ec22cb,
+        0 0 50px #ec22cb,
+        0 0 100px #ec22cb;
+}
+
+.btn span {
+    position: absolute;
+    display: block;
+}
+
+.btn span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ec22cb);
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+.btn span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ec22cb);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+.btn span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #ec22cb);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+.btn span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #ec22cb);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+text {
+    margin-top: 30px;
+}
+
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+   width: 100%;
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: #f15ed9;
+}
+
+.form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+    color:#ee6fd9;
+    transform: translateY(-30px);
+}
+.error{
+    margin-top:40px;
+    font-size: 20px;
+}
+.newUrl{
+    font-size: 20px;
+}
+.hidden {
+    visibility:hidden
+}
+.messageCopy{
+    background-color: rgba(0, 0, 0, 0.514);
+    color:white;
+    position:absolute;
+    bottom:0;
+    right:80px;
+    width: 200px;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 20px;
+}
+.showMessage{
+    visibility: visible;
+    opacity: 1;
+    transition:opacity .6s ;
+}

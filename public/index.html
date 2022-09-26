@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL shortener</title>
+    <link rel="stylesheet" href="./styles/main.css" type="text/css" />
+
+
+</head>
+
+<body>
+    <h1>Url shortener</h1>
+    <p class="text">
+        URL that goes too far to share on twitter? URL that doesn't look good on your CV because it's tremendously long?
+    </p>
+    <p class="text">We have the solution!!!</p>
+    <p class="text">
+        This shortener allows you to reduce long links for easier sharing. Just paste the long URL and click the Shorten
+        button.
+        Just below the abbreviated url will appear. Just copy and share it on websites, chat, and email. Also, after
+        sharing it you can find out how many views it received!
+    </p>
+    <div class="container">
+        <h2>Enter the url you want to shorten</h2>
+
+        <form class="form-control">
+
+
+            <input class="input" type="text" required />
+            <label>Enter the url </label>
+            <button class="btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Shorten</button>
+                <p class="error"></p>
+                <p class="newUrlText"></p>
+                <button class="copyBtn hidden">copy url</button>
+               </form> 
+        <div class="messageCopy">
+                    <p>The short url has been copied!</p>
+                </div>
+        <script src="./index.js"></script>
+</body>
+
+</html>
